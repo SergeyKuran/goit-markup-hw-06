@@ -779,6 +779,7 @@ img {
   cursor: pointer;
 }
 
+.backdrop-button:hover > .backdrop-svg,
 .backdrop-button:focus > .backdrop-svg {
   fill: var(--color-accent);
 }
@@ -830,6 +831,15 @@ textarea {
 
   border: 1px solid var(--form-modal-border);
   border-radius: 4px;
+
+  transform: border-color 250ms
+    var(--transition-timing-function-all-hover-focus);
+}
+
+.form-modal-textarea:hover,
+.form-modal-textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
 }
 
 .form-modal-textarea::placeholder {
@@ -854,6 +864,13 @@ textarea {
   border-radius: 4px;
 }
 
+.form-modal-input:hover,
+.form-modal-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.form-modal-input:hover ~ .form-modal-svg,
 .form-modal-input:focus ~ .form-modal-svg {
   fill: var(--color-accent);
   border-color: var(--color-accent);
@@ -925,7 +942,8 @@ textarea {
   transform: box-shadow 250ms var(--transition-timing-function-all-hover-focus);
 }
 
-.form-modal-button:hover {
+.form-modal-button:hover,
+.form-modal-button:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -967,7 +985,7 @@ textarea {
   transition: border-color 250ms
     var(--transition-timing-function-all-hover-focus);
 }
-
+.form-input-footer:hover,
 .form-input-footer:focus {
   outline: none;
   border-color: var(--color-accent);
